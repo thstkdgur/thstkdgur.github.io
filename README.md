@@ -1,1 +1,0 @@
-# thstkdgur.github.io
