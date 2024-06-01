@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노인 복지 정책</title>
+    <style>
+        body {font-family: Arial, sans-serif; line-height: 1.6; margin: 20px;}
+        h1 {color: #333;}
+        p {font-size: 16px;color: #666;}
+        .highlight {background-color: yellow;}
+        .link {color: blue;text-decoration: underline ; cursor: pointer;}
+        .content {margin-top: 20px;}
+        .search-box {margin-top: 20px;}
+        .search-box input[type="text"] {padding: 10px; font-size: 16px;}
+        .search-box button {padding: 10px 15px; font-size: 16px; background-color: #007BFF; color: white; border: none; cursor: pointer;}
+        .navbar {
+            background-color: #f8f9fa;  
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .navbar a {
+            color: #000;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .navbar a:hover {
+            background-color: #ced4da;
+        }
+        .navbar a {
+            color: #000;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-right: 10px; /* 간격 조정 */
+        }
+        .navbar a:hover {
+            background-color: #ced4da;
+        }
+        .menu-container {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .menu-button {
+            background-color: #666;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .menu-content {
+            display: none;
+            margin-top: 20px;
+        }
+        .menu-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>노인 복지 정책</h1>
+
+    <div class="navbar">
+        <a href="https://www.daegu.go.kr/welf/index.do?menu_id=00000491&servletPath=%2Fwelf">대구광역시 시청</a>
+        <a href="http://www.tgsenior.or.kr/html/main.html">노인종합복지관</a>
+    </div>
+
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu('basicPension')">기초연금</button>
+        <button class="menu-button" onclick="toggleMenu('노인맞춤돌봄서비스')">노인맞춤돌봄서비스</button>
+        <button class="menu-button" onclick="toggleMenu('priorityPass')">요양보호사</button>
+        <button class="menu-button" onclick="toggleMenu('노인복지회관')">노인복지회관</button>
+
+        <div id="basicPension" class="menu-content">
+            <h2>기초연금</h2>
+            <p> 신청대상 </p>
+            <p>만65세이상의 한국 국적을 가지고 국내 거주하시는 어르신</p>
+            <p>만65세 미만의 경우 만65세 생일이 속하는 달의 1개월 전부터 신청 가능</p>
+            <p>소득·재산 기준 초과로 탈락하여도 소득·재산이 감소하면 재신청 가능</p>
+            <p>연금액</p>
+            <p>1인 지급액 월 최고 334,810원, 부부 2인 수급가구 535,680원</p>
+            <p>선정기준</p>
+            <p>월 소득인정액이 단독가구 월 213만원, 부부가구 월 340.8만원 이하인 경우</p>
+            <p>소득·재산공제</p>
+            <p>근로소득 공제 : 월 110만원(개인별) 공제 후 30% 추가 공제</p>
+            <p>금융재산 공제 : 2,000만원(가구별)</p>
+            <p>기본재산액 공제 : 대도시 1억 3,500만원(가구별)</p>
+            <p>신청방법</p>
+            <p>주소지 읍·면·동 주민센터 또는 가까운 국민연금공단 지사에 신청</p>
+            <p>복지로를 통한 온라인 신청(복지로, https://www.bokjiro.go.kr)</p>
+            <p>문의</p>
+            <p>읍·면·동 주민센터나 기초연금 홈페이지(http://basicpension.mohw.go.kr )</p>
+        </div>
+
+        <div id="노인맞춤돌봄서비스" class="menu-content">
+            <h2>노인맞춤돌봄서비스</h2>
+            <p>서비스 목적</p>
+            <p>일상생활 영위가 어려운 취약노인에게 적절한 돌봄서비스를 제공하여 안정적인 노후생활 보장, 노인의 기능·건강 유지 및 악화 예방</p>
+            <p>서비스 대상</p>
+            <p>65세 이상 기초생활수급자, 차상위계층 또는 기초연금수급자 중 독거·조손가구 등 돌봄이 필요한 노인(대상자 선정도구*를 통해 우선순위에 따라 선정)</p>
+            <p>* 대상자 선정도구: 신체·정신·사회참여 영역의 취약요인을 조사하여 대상자 선정여부, 서비스 제공 시간의 범위 등을 산정</p>
+            <p>서비스제공절차</p>
+            <img src="https://www.daegu.go.kr/cmsh/daegu.go.kr/welf/images/content/00000495_img.jpg" alt="서비스제공절차">
+        </div>
+
+        <div id="priorityPass" class="menu-content">
+            <h2>요양보호사</h2>
+            <p>요양보호사</p>
+            <p>개념</p>
+            <p>전문인력 양성을 통해 질 높은 요양서비스 제공하고자 요양보호사 자격시험제 도입 교육과정 이수 후 자격시험에 합격</p>
+            <p>근거</p>
+            <p>노인복지법 제39조의 2(요양보호사의 직무·자격증 교부 등)</p>    
+            <p>대상</p>
+            <p>국민(학력,연령 제한없음), 외국인(출입국관리법령에 위반되지 않는 자)</p>
+            <p>취득절차</p>
+            <img src="https://www.daegu.go.kr/cmsh/daegu.go.kr/welf/images/content/00000498_img.jpg?ver=1" alt="경로우대 사진">
+            <p>교육시간</p>
+            <table border="1">
+                <tr>
+                    <th colspan = 2>구분</th>
+                    <th>총시간</th>
+                    <th>이론</th>
+                    <th>실기</th>
+                    <th>실습</th>
+                </tr>
+                <tr>
+                    <td colspan = 2>신규자</td>
+                    <td>320</td>
+                    <td>126</td>
+                    <td>114</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>국가자격소지자</td>
+                    <td>간호사</td>
+                    <td>40</td>
+                    <td>26</td>
+                    <td>6</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>국가자격소지자</td>
+                    <td>사회복지사</td>
+                    <td>50</td>
+                    <td>32</td>
+                    <td>10</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>국가자격소지자</td>
+                    <td>간호조무사, 물리/작업치료사</td>
+                    <td>50</td>
+                    <td>31</td>
+                    <td>11</td>
+                    <td>8</td>  
+                </tr>
+            </table>
+            <p>자격시험</p>
+            <table border="1">
+                <tr>
+                    <td>시험과목</td>
+                    <td>시험내용</td>
+                    <td>문항수</td>
+                    <td>시험방법 및 형태</td>
+                </tr>
+                <tr>
+                    <td>필기</td>
+                    <td>요양보호론</td>
+                    <td>35문항</td>
+                    <td>객관식 5지선다 필기형</td>
+                </tr>
+                <tr>
+                    <td>실기</td>
+                    <td>요양보호에 관한 것</td>
+                    <td>45문항</td>
+                    <td>객관식 5지선다 필기형</td>
+                </tr>
+            </table>
+            <p>※ 교육관련 구체적 사항(개강시기, 교육비 등)은 교육원으로 문의바람.</p>
+        </div>
+        <div id="노인복지회관" class="menu-content">
+            <h2>대구광역시노인종합복지관은</h2>
+            <p>초고령사회에 대비하여 지역 특성에 맞는 전문프로그램 개발을 통해</p>
+            <p>노인의 여가활동지원과 각종 노인문제의 예방 및 치료를 실시함으로써</p>
+            <p>사회적응력을 향상시키고, 신체적, 정신적 건강증진을 도모하여</p>
+            <p>안정된 노후를 보낼 수 있도록 하며, 생산적 노인복지의 패러다임을 통해</p>
+            <p>노인복지 선진화를 주도합니다.</p>
+            <img src="http://www.tgsenior.or.kr/images/about/02_img02.jpg?ver=1.1" alt="노인복지회관 사진">
+            <h2>Mission and Vision</h2>
+            <img src="http://www.tgsenior.or.kr/images/about/02_img01.jpg" alt="노인복지회관 모토 사진">
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu(menuId) {
+            var menuContent = document.getElementById(menuId);
+            if (menuContent.classList.contains('active')) {
+                menuContent.classList.remove('active');
+            } else {
+                // 모든 메뉴 숨기기
+                var allMenus = document.querySelectorAll('.menu-content');
+                allMenus.forEach(function(menu) {
+                    menu.classList.remove('active');
+                });
+                // 클릭한 메뉴 보이기
+                menuContent.classList.add('active');
+            }
+        }
+    </script>
+    
+    <div>
+        <p>자세한 내용은 <span class="link" onclick="window.open('https://www.daegu.go.kr/welf/index.do?menu_id=00000491&servletPath=%2Fwelf')">대구광역시 시청</span>에서 확인하세요.</p>
+    </div>
+
+    <script>
+        function searchHighlight() {
+            const searchInput = document.getElementById('search-input').value.trim();
+            if (searchInput === '') return;
+
+            const content = document.querySelector('.content');
+            const regex = new RegExp(`(${searchInput})`, 'gi');
+            content.innerHTML = content.innerHTML.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+
+            content.innerHTML = content.innerHTML.replace(regex, '<mark class="highlight">$1</mark>');
+        }
+    </script>
+</body>
+ 
+</html>
