@@ -20,6 +20,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            overflow-x: auto;
         }
         .navbar a {
             color: #000;
@@ -52,11 +53,13 @@
         .menu-button {
             background-color: #666;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 25px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             margin-right: 10px;
+            margin-bottom: 10px;
+            display: block;
         }
         .menu-content {
             display: none;
@@ -65,6 +68,10 @@
         .menu-content.active {
             display: block;
         }
+        
+        .menu-content img {
+            max-width: 100%; /* 이미지 크기를 화면 너비에 맞게 조정 */
+            height: auto;
     </style>
 </head>
 <body>
